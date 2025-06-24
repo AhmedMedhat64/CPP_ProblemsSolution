@@ -1,0 +1,10 @@
+std::vector<int> sumOddAndEven(std::vector<int> arr) {
+	std::vector<int> evenOdd = std::vector<int>({ 0, 0 });
+	for (int num : arr) {
+		if (num % 2 == 0)
+			evenOdd.at(0) += num;
+		else
+			evenOdd.at(1) += num;
+	}
+	return evenOdd;
+}

@@ -1,0 +1,39 @@
+#include <vector>
+#include <string>
+#include <algorithm>
+std::vector<int> Asc(std::vector<int> arr) {
+	std::vector<int> asc;
+	while (!arr.empty()) {
+		int index = 0;
+		int Min = arr[0];
+		for (int i = 0; i < arr.size(); i++) {
+			if (arr[i] < Min) {
+				Min = arr[i];
+				index = i;
+			}
+
+		}
+		asc.push_back(Min);
+		arr.erase(arr.begin() + index);
+	}
+	return asc;
+}
+
+std::vector<int> Des(std::vector<int> arr) {
+	std::vector<int> asc;
+	asc = Asc(arr);
+	std::reverse(asc.begin(), asc.end());
+	return asc;
+}
+
+std::vector<int> AscDesNone(std::vector<int> arr, const std::string& order) {
+	if (s == "Asc")
+		return Asc(arr);
+	else if (s == "Des")
+		return Des(arr);
+	else
+		return arr;
+}
+
+
+

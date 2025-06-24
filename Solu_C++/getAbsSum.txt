@@ -1,0 +1,7 @@
+int getAbsSum(std::vector<int> arr) {
+	int sum = 0;
+	for (auto item : arr) {
+		sum += abs(item);
+	}
+	return sum;
+}

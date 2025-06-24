@@ -1,0 +1,7 @@
+float totalOvers(int nBalls) {
+	int fullOvers = nBalls / 6;
+	int remainingBalls = nBalls % 6;
+
+	// Construct the overs as float: e.g., 3 overs and 5 balls = 3.5
+	return fullOvers + remainingBalls / 10.0f;
+}

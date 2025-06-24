@@ -1,0 +1,16 @@
+std::vector<int> sortNumsAscending(std::vector<int> arr) {
+std::vector<int> asc;
+while (!arr.empty()) {
+	int MinValue = arr[0];
+	int MinIndex = 0;
+	for (int i = 1; i < arr.size(); i++) {
+		if (arr[i] < MinValue) {
+			MinValue = arr[i];
+			MinIndex = i;
+		}
+	}
+	asc.push_back(MinValue);
+	arr.erase(arr.begin() + MinIndex);
+}
+	return asc;
+}

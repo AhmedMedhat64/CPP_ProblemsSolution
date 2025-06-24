@@ -1,0 +1,24 @@
+/* Mine 
+std::string uncensor(std::string str, std::string vowels) { 	
+	for (auto var : vowels) {
+		for (char& item : str) {
+			if (item == '*')
+			{
+				item = var;
+				break;
+			}
+		}
+	}
+	
+	return str;
+}
+*/ ChatGpt Inhance
+std::string uncensor(std::string str, const std::string& vowels) {
+	int vowelIndex = 0;
+	for (char& ch : str) {
+		if (ch == '*') {
+			ch = vowels[vowelIndex++];
+		}
+	}
+	return str;
+}

@@ -1,0 +1,22 @@
+int factorial(int num) {
+	num = abs(num);
+	int mul = 1;
+	for (int i = num ; i > 0; i--)
+	{
+		mul *= i; 
+	}
+	return mul;
+}
+
+std::vector<int> pascalsTriangle(int n) {
+	std::vector<int> pascal;
+	for (int i = 0; i < n; i++)
+	{
+		for (int k = 0; k < i + 1; k++)
+		{
+			int equ = factorial(i) / (factorial(k) * factorial(i - k));
+			pascal.push_back(equ);
+		}
+	}
+	return pascal;
+}

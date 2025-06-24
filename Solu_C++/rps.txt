@@ -1,0 +1,37 @@
+std::string rps(std::string s1, std::string s2) {
+	std::unordered_map<std::string, std::string> beats = {
+		{"rock", "scissors"},
+		{"paper", "rock"},
+		{"scissors", "paper"},
+	};
+
+	if (s1 == s2) 
+		return "tie";
+	/*
+	else {
+		if (s1 == "rock") {
+			if (s2 == "paper")
+				result = "player 2 wins";
+			else 
+				result = "player 1 wins";
+		}
+		else if (s1 == "paper") {
+			if (s2 == "rock")
+				result = "player 1 wins";
+			else
+				result = "player 2 wins";
+		}
+		else {
+			if (s2 == "rock")
+				result = "player 2 wins";
+			else
+				result = "player 1 wins";
+		}
+	}
+	*/
+
+	if (beats[s1] == s2)
+		return "player 1 wins";
+	else
+		return "player 2 wins";
+}

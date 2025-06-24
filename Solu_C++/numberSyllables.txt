@@ -1,0 +1,12 @@
+int numberSyllables(std::string word) {
+	/*
+	int count = 0;
+	for (char item : word) {
+		if (item == '-') {
+			count++;
+		}
+	}
+	return count + 1;
+	*/ // another solution 
+	return std::count(word.begin(), word.end(), '-') + 1;
+}

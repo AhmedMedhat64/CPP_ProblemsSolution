@@ -1,0 +1,24 @@
+int letterCounter(vector<vector<char>> arr, char c) {
+	int sum = 0;
+    // note count only work with 1D wrray 
+
+	for (const auto& Row : arr) {
+		sum += count(Row.begin(), Row.end(), c);
+	}
+	return sum;
+}
+int main() {
+    std::vector<std::vector<char>> V = {
+        {'D', 'E', 'Y', 'H', 'A', 'D'},
+        {'D', 'E', 'Y', 'H', 'A', 'D'},
+        {'C', 'B', 'Z', 'Y', 'J', 'K'},
+        {'D', 'B', 'C', 'A', 'M', 'N'},
+        {'F', 'G', 'G', 'R', 'S', 'R'},
+        {'V', 'X', 'H', 'A', 'S', 'S'}
+    };
+
+    int sum = letterCounter(V, 'D');
+    std::cout << "Occurrences of 'D': " << sum << std::endl;
+
+    return 0;
+}
